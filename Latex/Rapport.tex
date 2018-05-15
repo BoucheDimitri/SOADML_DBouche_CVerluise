@@ -162,7 +162,7 @@ $$ y_t - \langle w^{(t-1)}, x_t \rangle - \frac{\alpha_t}{\lambda t}||x_t||^2  =
 This gives us an optimal $\alpha_t$ : $\alpha_t^{\star}$ defined by :  
 $$ \alpha_t^{\star} = \frac{\lambda t}{||x_t||^2} (y_t - x_t^T w^{(t-1)}).$$
 
-Let us now ensure that we threshold this value to make sure that it stays within the interval $[0, 1]$: The optimal thresholded value is thus $\tilde{\alpha_t}$:
+Let us now ensure that we threshold this value to make sure that $ \alpha_t^{\star} y_t $ stays within the interval $[0, 1]$: The optimal thresholded value is thus $\tilde{\alpha_t}$:
 \begin{eqnarray*}
     \tilde{\alpha_t} &=& \alpha_t^{\star} ~if~\alpha_t^{\star} y_t \in [0, 1] \\
     \tilde{\alpha_t} &=& \min(0, y_t)~if~\alpha_t^{\star} < \min(0, y_t)\\
